@@ -20,6 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: Install three.js
         run: npm install three
 
       - name: Build project
