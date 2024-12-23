@@ -1,22 +1,24 @@
-import { resolve } from 'path';
+const path = require('path');
 
-export const entry = './app.js';
-export const output = {
+module.exports = {
+  entry: './app.js',
+  output: {
     filename: 'bundle.js',
-    path: resolve(__dirname, 'dist')
-};
-export const module = {
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
     rules: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env']
-                }
-            }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
+      }
     ]
+  },
+  mode: 'development'
 };
-export const mode = 'development';
