@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack && node copy-bundle.js"
+    "build": "webpack && node copy-bundle.js && node copy-html.js"
   },
   "dependencies": {
     "three": "^0.132.2"
