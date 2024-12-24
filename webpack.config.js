@@ -23,8 +23,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.html'
+      template: './index.html', // Use your existing index.html as a template
+      filename: 'index.html'    // Output file in the dist directory
     })
   ],
   mode: 'development'
